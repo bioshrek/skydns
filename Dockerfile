@@ -10,7 +10,7 @@ RUN mkdir -p $GOPATH/src/github.com/skynetservices/skydns
 RUN git clone https://github.com/skynetservices/skydns.git $GOPATH/src/github.com/skynetservices/skydns
 RUN go get github.com/skynetservices/skydns
 WORKDIR $GOPATH/src/github.com/skynetservices/skydns
-RUN ls
+RUN pwd
 RUN go build -v
 
 VOLUME /skydns-binaries
